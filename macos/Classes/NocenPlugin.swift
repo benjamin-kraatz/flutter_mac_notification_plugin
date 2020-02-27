@@ -10,8 +10,6 @@ public class NocenPlugin: NSObject, FlutterPlugin, NSUserNotificationCenterDeleg
 
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch call.method {
-        case "getPlatformVersion":
-            result("macOS " + ProcessInfo.processInfo.operatingSystemVersionString)
         case "showNotification":
             showNotification()
             result("done")
