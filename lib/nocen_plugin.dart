@@ -10,8 +10,7 @@ class NocenPlugin {
     return version;
   }
 
-  static Future<String> get showNotification async {
-    final String version = await _channel.invokeMethod('showNotification');
-    return version;
+  static Future<void> get showNotification async {
+    return _channel.invokeMethod('showNotification');
   }
 }
