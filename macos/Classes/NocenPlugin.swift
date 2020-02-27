@@ -32,24 +32,24 @@ public class NocenPlugin: NSObject, FlutterPlugin, NSUserNotificationCenterDeleg
         
         var actions = [NSUserNotificationAction]()
         
-        let actionAccept = NSUserNotificationAction(identifier: "action-accept", title: "Annehmen")
-        let actionDismiss = NSUserNotificationAction(identifier: "action-dismiss", title: "Ablehnen")
+        let actionAccept = NSUserNotificationAction(identifier: "action-accept", title: "OK")
+        let actionDismiss = NSUserNotificationAction(identifier: "action-dismiss", title: "Quite good")
         
         actions.append(actionAccept)
         actions.append(actionDismiss)
         
         let notification = NSUserNotification()
         notification.identifier = "test-not"
-        notification.title = "Neuer Share"
-        notification.subtitle = "Von BENN"
-        notification.informativeText = "Hallo Du da, ich teste Benachrichtigungen"
+        notification.title = "Notification"
+        notification.subtitle = "Scheduled after 3 seconds"
+        notification.informativeText = "This plugin example shows how to use it to display notifications on macOS > 10.8. It was scheduled after 3 seconds. Answers cannot be read yet."
         notification.soundName = NSUserNotificationDefaultSoundName
         notification.deliveryDate = NSDate(timeIntervalSinceNow: 3) as Date
         notification.hasReplyButton = true
-        notification.responsePlaceholder = "Antworte hier"
+        notification.responsePlaceholder = "Your answer"
         notification.hasActionButton = true
-        notification.otherButtonTitle = "Mehr Info"
-        notification.actionButtonTitle = "Mehr"
+        notification.otherButtonTitle = "More"
+        notification.actionButtonTitle = "More"
         notification.additionalActions = actions
         
         let notificationCenter = NSUserNotificationCenter.default
