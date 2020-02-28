@@ -1,5 +1,5 @@
-name: nocen_plugin_example
-description: Demonstrates how to use the nocen_plugin plugin.
+name: mac_notifications_example
+description: Demonstrates how to use the mac_notifications plugin.
 publish_to: 'none'
 
 environment:
@@ -9,7 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  nocen_plugin:
+  mac_notifications:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.

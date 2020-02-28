@@ -1,15 +1,45 @@
 import 'package:flutter/foundation.dart';
 
+/// This provides information about a notification and must be given
+/// to [MacNotifications.showNotification].
 class NocenOptions {
+  /// A unique identifier. This must not be null.
   final String identifier;
+
+  /// The bold title. This must not be null.
   final String title;
+
+  /// The subtitle, shown underneath title. This must not be null.
   final String subtitle;
+
+  /// An optional informative text, show under subtitle.
   final String informative;
+
+  /// If you want to have a notification with reply text field, set this to true.
+  ///
+  /// Defaults to false.
   final bool hasReplyButton;
+
+  /// Type your placeholder for the reply text field.
+  ///
+  /// Defaults to an empty string.
   final String replyPlaceholder;
+
+  /// Getting informed as an action is pressed is currently unsupported in this plugin.
   final bool hasActionButton;
+
+  /// Getting informed as an action is pressed is currently unsupported in this plugin.
   final String actionButtonText;
+
+  /// Define how long to wait before delivering a notification.
+  ///
+  /// This value defaults to 1 and must never be less.
   final int scheduleTimeSeconds;
+
+  /// To define a schedule notification, set this to true.
+  /// A notification is delivered after [scheduleTimeSeconds] if true.
+  ///
+  /// Defaults to false.
   final bool schedule;
 
   NocenOptions({

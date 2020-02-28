@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:nocen_plugin/nocen_options.dart';
-import 'package:nocen_plugin/nocen_plugin.dart';
+import 'package:mac_notifications/nocen_options.dart';
+import 'package:mac_notifications/mac_notifications.dart';
 
 void main() => runApp(MyApp());
 

@@ -1,9 +1,10 @@
 name: mac_notifications
-description: A new Flutter plugin.
+description: Display macOS notifications from Flutter and get answer from a reply.
 version: 1.0.0
-homepage:
+homepage: https://github.com/beagle-barks/flutter_mac_notification_plugin.git
 
 environment:
+  flutter: ">=1.10.0 <2.0.0"
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
