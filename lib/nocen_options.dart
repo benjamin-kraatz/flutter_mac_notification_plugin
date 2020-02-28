@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class NocenOptions {
   final String title;
   final String subtitle;
@@ -8,12 +10,23 @@ class NocenOptions {
   final String actionButtonTitle;
 
   NocenOptions({
-    this.title,
-    this.subtitle,
-    this.informative,
-    this.hasReplyButton,
-    this.replyButtonText,
-    this.hasActionButton,
-    this.actionButtonTitle,
-  });
+    @required this.title,
+    @required this.subtitle,
+    this.informative = '',
+    this.hasReplyButton = false,
+    this.replyButtonText = '',
+    this.hasActionButton = false,
+    this.actionButtonTitle = '',
+  })  : assert(title != null, "Please give your notification a title"),
+        assert(subtitle != null, "Please give your notification a subtitle"),
+        assert(informative != null,
+            "Do not pass any null values to NocenOptions!"),
+        assert(hasReplyButton != null,
+            "Do not pass any null values to NocenOptions!"),
+        assert(replyButtonText != null,
+            "Do not pass any null values to NocenOptions!"),
+        assert(hasActionButton != null,
+            "Do not pass any null values to NocenOptions!"),
+        assert(actionButtonTitle != null,
+            "Do not pass any null values to NocenOptions!");
 }
