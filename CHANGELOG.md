@@ -1,3 +1,4 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Working example.
+* In the future we plan to integrate `local_notifications` to provide a "multi-multi-platform" notification manager.
