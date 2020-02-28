@@ -45,9 +45,18 @@ class _MyAppState extends State<MyApp> {
 
   void _showNotification() {
     try {
-      MacNotifications.showNotification(NocenOptions(
-          title: 'Hello',
-          subtitle: 'This is a notification from Flutter to Mac'));
+      MacNotifications.showNotification(
+        NocenOptions(
+            identifier: 'test-notifications',
+            title: 'Hello',
+            subtitle: 'This is a notification from Flutter to Mac',
+            informative:
+                'And it runs smooth with almost no cost when implementing ;)',
+            schedule: true,
+            scheduleTimeSeconds: 4,
+            hasReplyButton: true,
+            replyPlaceholder: 'Tell me about your day.'),
+      );
     } on PlatformException {}
   }
 }
