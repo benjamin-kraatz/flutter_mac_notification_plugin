@@ -18,7 +18,7 @@ import 'package:mac_notifications/mac_notifications.dart';
 
 ## Use
 
-Here's a basic usage example. See `example` folder on (https://github.com/beagle-barks/flutter_mac_notification_plugin/tree/master/example)[GitHub] for more information.
+Here's a basic usage example. See `example` folder on (GitHub)[https://github.com/beagle-barks/flutter_mac_notification_plugin/] for more information.
 
 ### Basic notification
 
@@ -53,4 +53,30 @@ try {
            ),
      );
 } on PlatformException {}
+```
+
+### Get the reply
+
+To get the text the user enters in a reply notification, you can simply use a `StreamBuilder` or `StreamSubscription`.
+
+
+```dart
+StreamBuilder<String>(
+  stream: MacNotifications.getAnswers,
+  builder: (context, snapshot) {
+      if (snapshot.data == null)
+         return Text(
+           'Your answer goes here.',
+           style: TextStyle(
+             fontWeight: FontWeight.bold,
+           ),
+         );
+         return Text(
+           snapshot.data,
+           style: TextStyle(
+             fontWeight: FontWeight.bold,
+           ),
+         );
+      },
+)
 ```

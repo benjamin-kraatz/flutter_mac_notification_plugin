@@ -1,3 +1,7 @@
+## 1.0.1
+
+* `README.md`: Provide an example on how to use replies
+
 ## 1.0.0
 
 * Working example.
