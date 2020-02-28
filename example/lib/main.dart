@@ -28,6 +28,13 @@ class _MyAppState extends State<MyApp> {
                 child: Text('Show notification'),
                 onPressed: _showNotification,
               ),
+              StreamBuilder<String>(
+                stream: NocenPlugin.getAnswers,
+                builder: (context, snapshot) {
+                  if (snapshot.data == null) return Container();
+                  return Text(snapshot.data);
+                },
+              )
             ],
           ),
         ),
