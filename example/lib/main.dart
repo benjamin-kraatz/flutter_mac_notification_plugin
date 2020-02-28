@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('Mac Notifications'),
         ),
         body: Center(
           child: Column(
@@ -26,15 +26,45 @@ class _MyAppState extends State<MyApp> {
               Text(
                   'Click on this button and wait 3 seconds for a notification. You may be asked for permissions.'),
               FlatButton(
-                child: Text('Show notification'),
-                onPressed: _showNotification,
-              ),
-              StreamBuilder<String>(
-                stream: MacNotifications.getAnswers,
-                builder: (context, snapshot) {
-                  if (snapshot.data == null) return Container();
-                  return Text(snapshot.data);
+                child: Text('Show  basic notification'),
+                textColor: Theme.of(context).accentColor,
+                onPressed: () {
+                  _showNotification(false);
                 },
+              ),
+              FlatButton(
+                child: Text('Show reply notification'),
+                textColor: Theme.of(context).accentColor,
+                onPressed: () {
+                  _showNotification(true);
+                },
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey),
+                ),
+                padding: const EdgeInsets.all(12),
+                child: StreamBuilder<String>(
+                  stream: MacNotifications.getAnswers,
+                  builder: (context, snapshot) {
+                    if (snapshot.data == null)
+                      return Text(
+                        'Your answer goes here.',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      );
+                    return Text(
+                      snapshot.data,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    );
+                  },
+                ),
               )
             ],
           ),
@@ -43,7 +73,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  void _showNotification() {
+  void _showNotification(bool reply) {
     try {
       MacNotifications.showNotification(
         NocenOptions(
@@ -53,8 +83,8 @@ class _MyAppState extends State<MyApp> {
             informative:
                 'And it runs smoothly with almost no cost when implementing ;)',
             schedule: true,
-            scheduleTimeSeconds: 4,
-            hasReplyButton: true,
+            scheduleTimeSeconds: 3,
+            hasReplyButton: reply,
             replyPlaceholder: 'Tell me about your day.'),
       );
     } on PlatformException {}
