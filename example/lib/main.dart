@@ -44,7 +44,7 @@ class _MyAppState extends State<MyApp> {
 
   void _showNotification() {
     try {
-      NocenPlugin.showNotification;
+      NocenPlugin.showNotification(null);
     } on PlatformException {}
   }
 }
