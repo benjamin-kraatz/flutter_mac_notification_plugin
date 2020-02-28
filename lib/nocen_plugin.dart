@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:nocen_plugin/nocen_options.dart';
 
 class NocenPlugin {
   static final NocenPlugin _instance = NocenPlugin._();

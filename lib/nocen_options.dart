@@ -7,6 +7,13 @@ class NocenOptions {
   final bool hasActionButton;
   final String actionButtonTitle;
 
-  NocenOptions(this.title, this.subtitle, this.informative, this.hasReplyButton,
-      this.replyButtonText, this.hasActionButton, this.actionButtonTitle);
+  NocenOptions({
+    this.title,
+    this.subtitle,
+    this.informative,
+    this.hasReplyButton,
+    this.replyButtonText,
+    this.hasActionButton,
+    this.actionButtonTitle,
+  });
 }
