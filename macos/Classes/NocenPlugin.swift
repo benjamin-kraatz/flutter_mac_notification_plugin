@@ -1,10 +1,17 @@
 import Cocoa
 import FlutterMacOS
 
-public class NocenPlugin: NSObject, FlutterPlugin, NSUserNotificationCenterDelegate {
+public class NocenPlugin: NSObject, FlutterPlugin, FlutterStreamHandler, NSUserNotificationCenterDelegate {
+    
+    private var _eventSink: FlutterEventSink?
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "nocen_plugin", binaryMessenger: registrar.messenger)
         let instance = NocenPlugin()
+        let eventChannelName = "com.bbarks.nocen_plugin/notificationAnswer"
+        let eventChannel = FlutterEventChannel(name: eventChannelName, binaryMessenger: registrar.messenger)
+        eventChannel.setStreamHandler(instance)
+        
+        let channel = FlutterMethodChannel(name: "nocen_plugin", binaryMessenger: registrar.messenger)
+
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
 
@@ -19,12 +26,27 @@ public class NocenPlugin: NSObject, FlutterPlugin, NSUserNotificationCenterDeleg
     }
     
     public func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
-        print("ACTIVATION FETCHED")
+        switch notification.activationType {
+        case .replied:
+            guard let response = notification.response else { return }
+            print("User replied \(response)")
+            _eventSink?(response)
+            
+        default: return
+        }
     }
     
-    public func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
-        return true
+    
+    public func onListen(withArguments arguments: Any?, eventSink events: @escaping FlutterEventSink) -> FlutterError? {
+        _eventSink = events
+        return nil
     }
+     
+    public func onCancel(withArguments arguments: Any?) -> FlutterError? {
+        _eventSink = nil
+        return nil
+    }
+       
     
     func showNotification() {
         
@@ -55,4 +77,3 @@ public class NocenPlugin: NSObject, FlutterPlugin, NSUserNotificationCenterDeleg
         notificationCenter.scheduleNotification(notification)
     }
 }
-
