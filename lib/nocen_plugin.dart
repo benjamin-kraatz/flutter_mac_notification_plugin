@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:nocen_plugin/nocen_options.dart';
 
-class NocenPlugin {
-  static final NocenPlugin _instance = NocenPlugin._();
+class MacNotifications {
+  static final MacNotifications _instance = MacNotifications._();
 
-  factory NocenPlugin() {
+  factory MacNotifications() {
     return _instance;
   }
 
-  NocenPlugin._();
+  MacNotifications._();
 
   static const MethodChannel _channel = const MethodChannel('nocen_plugin');
 

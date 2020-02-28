@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:nocen_plugin/nocen_options.dart';
 import 'package:nocen_plugin/nocen_plugin.dart';
 
 void main() => runApp(MyApp());
@@ -29,7 +30,7 @@ class _MyAppState extends State<MyApp> {
                 onPressed: _showNotification,
               ),
               StreamBuilder<String>(
-                stream: NocenPlugin.getAnswers,
+                stream: MacNotifications.getAnswers,
                 builder: (context, snapshot) {
                   if (snapshot.data == null) return Container();
                   return Text(snapshot.data);
@@ -44,7 +45,9 @@ class _MyAppState extends State<MyApp> {
 
   void _showNotification() {
     try {
-      NocenPlugin.showNotification(null);
+      MacNotifications.showNotification(NocenOptions(
+          title: 'Hello',
+          subtitle: 'This is a notification from Flutter to Mac'));
     } on PlatformException {}
   }
 }
