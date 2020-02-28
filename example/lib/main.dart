@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
             title: 'Hello',
             subtitle: 'This is a notification from Flutter to Mac',
             informative:
-                'And it runs smooth with almost no cost when implementing ;)',
+                'And it runs smoothly with almost no cost when implementing ;)',
             schedule: true,
             scheduleTimeSeconds: 4,
             hasReplyButton: true,
