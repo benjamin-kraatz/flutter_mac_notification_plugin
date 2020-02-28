@@ -15,7 +15,7 @@ class NocenPlugin {
   static const MethodChannel _channel = const MethodChannel('nocen_plugin');
 
   static Future<void> showNotification(NocenOptions nocenOptions) async {
-    return _channel.invokeMethod('showNotification');
+    return _channel.invokeMethod('showNotification', nocenOptions.toMap());
   }
 
   static const EventChannel _answerChannel =

@@ -7,7 +7,7 @@ class NocenOptions {
   final bool hasReplyButton;
   final String replyButtonText;
   final bool hasActionButton;
-  final String actionButtonTitle;
+  final String actionButtonText;
 
   NocenOptions({
     @required this.title,
@@ -16,7 +16,7 @@ class NocenOptions {
     this.hasReplyButton = false,
     this.replyButtonText = '',
     this.hasActionButton = false,
-    this.actionButtonTitle = '',
+    this.actionButtonText = '',
   })  : assert(title != null, "Please give your notification a title"),
         assert(subtitle != null, "Please give your notification a subtitle"),
         assert(informative != null,
@@ -27,6 +27,18 @@ class NocenOptions {
             "Do not pass any null values to NocenOptions!"),
         assert(hasActionButton != null,
             "Do not pass any null values to NocenOptions!"),
-        assert(actionButtonTitle != null,
+        assert(actionButtonText != null,
             "Do not pass any null values to NocenOptions!");
+
+  Map<String, dynamic> toMap() {
+    return {
+      'title': title,
+      'subtitle': subtitle,
+      'informative': informative,
+      'hasReplyButton': hasReplyButton,
+      'replyButtonText': replyButtonText,
+      'hasActionButton': hasActionButton,
+      'actionButtonText': actionButtonText,
+    };
+  }
 }
