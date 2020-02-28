@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8805b6-624f-4e75-bf50-821678434c95" name="Default Changelist" comment="Provide an example on">
+    <list default="true" id="4e8805b6-624f-4e75-bf50-821678434c95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/nocen_plugin/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/nocen_plugin/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/nocen_plugin/macos/Classes/NocenPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/macos/Flutter/ephemeral/.symlinks/plugins/nocen_plugin/macos/Classes/NocenPlugin.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/nocen_plugin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/nocen_plugin.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/macos/Classes/NocenPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Classes/NocenPlugin.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nocen_plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nocen_plugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/nocen_plugin.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="38" />
+            <state relative-caret-position="120">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -72,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="2560" />
     <option name="height" value="1440" />
   </component>
@@ -82,8 +81,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -111,7 +110,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582822666667</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented the ability to listen for answers and display on Flutter side">
+      <created>1582879898976</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582879898976</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -182,7 +188,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.21434326" />
-      <window_info anchor="bottom" id="Run" order="1" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.329927" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" />
@@ -206,7 +212,8 @@
     <MESSAGE value="Little tweaks and a button to show notifications" />
     <MESSAGE value="Changed notification descriptions" />
     <MESSAGE value="Removed platform version logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed platform version logic" />
+    <MESSAGE value="Implemented the ability to listen for answers and display on Flutter side" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the ability to listen for answers and display on Flutter side" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/nocen_plugin_test.dart">
@@ -228,8 +235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/nocen_plugin.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="120">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

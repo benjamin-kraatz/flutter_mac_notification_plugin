@@ -30,7 +30,7 @@ public class NocenPlugin: NSObject, FlutterPlugin, FlutterStreamHandler, NSUserN
         case .replied:
             guard let response = notification.response else { return }
             print("User replied \(response)")
-            _eventSink?(response)
+            _eventSink?(response.string)
             
         default: return
         }
