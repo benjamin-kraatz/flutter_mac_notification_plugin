@@ -18,7 +18,9 @@ public class NocenPlugin: NSObject, FlutterPlugin, FlutterStreamHandler, NSUserN
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch call.method {
         case "showNotification":
-            showNotification()
+            
+            let options = call.arguments as! Dictionary<String, Any>
+            showNotification(with: options)
             result("done")
         default:
             result(FlutterMethodNotImplemented)
@@ -48,32 +50,30 @@ public class NocenPlugin: NSObject, FlutterPlugin, FlutterStreamHandler, NSUserN
     }
        
     
-    func showNotification() {
+    func showNotification(with options: Dictionary<String, Any>) {
         
-        var actions = [NSUserNotificationAction]()
-        
-        let actionAccept = NSUserNotificationAction(identifier: "action-accept", title: "OK")
-        let actionDismiss = NSUserNotificationAction(identifier: "action-dismiss", title: "Quite good")
-        
-        actions.append(actionAccept)
-        actions.append(actionDismiss)
-        
+
         let notification = NSUserNotification()
-        notification.identifier = "test-not"
-        notification.title = "Notification"
-        notification.subtitle = "Scheduled after 3 seconds"
-        notification.informativeText = "This plugin example shows how to use it to display notifications on macOS > 10.8. It was scheduled after 3 seconds. Answers cannot be read yet."
+        notification.identifier = (options["identifier"] as! String)
+        notification.title = (options["title"] as! String)
+        notification.subtitle = (options["subtitle"] as! String)
+        notification.informativeText = (options["informative"] as! String)
         notification.soundName = NSUserNotificationDefaultSoundName
-        notification.deliveryDate = NSDate(timeIntervalSinceNow: 3) as Date
-        notification.hasReplyButton = true
-        notification.responsePlaceholder = "Your answer"
-        notification.hasActionButton = true
-        notification.otherButtonTitle = "More"
-        notification.actionButtonTitle = "More"
-        notification.additionalActions = actions
+        notification.deliveryDate = NSDate(timeIntervalSinceNow: TimeInterval(options["scheduleTimeSeconds"] as! Int)) as Date
+        notification.hasReplyButton = (options["hasReplyButton"] as! Bool)
+        notification.responsePlaceholder = (options["replyPlaceholder"] as! String)
+        notification.hasActionButton = (options["hasActionButton"] as! Bool)
+        notification.actionButtonTitle = (options["actionButtonText"] as! String)
+        
+        let schedule = (options["schedule"] as! Bool)
         
         let notificationCenter = NSUserNotificationCenter.default
         notificationCenter.delegate = self
-        notificationCenter.scheduleNotification(notification)
+        
+        if(schedule) {
+            notificationCenter.scheduleNotification(notification)
+        } else {
+            notificationCenter.deliver(notification)
+        }
     }
 }
