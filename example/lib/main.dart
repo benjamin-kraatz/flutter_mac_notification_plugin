@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
-import 'package:mac_notifications/nocen_options.dart';
 import 'package:mac_notifications/mac_notifications.dart';
 
 void main() => runApp(MyApp());
@@ -75,8 +74,9 @@ class _MyAppState extends State<MyApp> {
   void _showNotification(bool reply) {
     try {
       MacNotifications.showNotification(
-        NocenOptions(
-            identifier: 'test-notifications',
+        MacNotificationOptions(
+            identifier:
+                'test-notifications${DateTime.now().millisecondsSinceEpoch}',
             title: 'Hello',
             subtitle: 'This is a notification from Flutter to Mac',
             informative:

@@ -5,10 +5,10 @@
 // 'flutter create' template.
 
 // The application's name. By default this is also the title of the Flutter window.
-PRODUCT_NAME = nocen_plugin_example
+PRODUCT_NAME = mac_notifications_example
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.bbarks.nocenPlugin
+PRODUCT_BUNDLE_IDENTIFIER = com.bbarks.macNotificationsExample
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2020 com.bbarks. All rights reserved.

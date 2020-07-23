@@ -1,15 +1,15 @@
-#import "NocenPlugin.h"
-#if __has_include(<nocen_plugin/nocen_plugin-Swift.h>)
-#import <nocen_plugin/nocen_plugin-Swift.h>
+#import "MacNotificationsPlugin.h"
+#if __has_include(<mac_notifications/mac_notifications-Swift.h>)
+#import <mac_notifications/mac_notifications-Swift.h>
 #else
 // Support project import fallback if the generated compatibility header
 // is not copied when this plugin is created as a library.
 // https://forums.swift.org/t/swift-static-libraries-dont-copy-generated-objective-c-header/19816
-#import "nocen_plugin-Swift.h"
+#import "mac_notifications-Swift.h"
 #endif
 
-@implementation NocenPlugin
+@implementation MacNotificationsPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftNocenPlugin registerWithRegistrar:registrar];
+  [SwiftMacNotificationsPlugin registerWithRegistrar:registrar];
 }
 @end

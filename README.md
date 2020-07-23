@@ -25,7 +25,7 @@ Here's a basic usage example. See `example` folder on (GitHub)[https://github.co
 ```dart
 try {
      MacNotifications.showNotification(
-       NocenOptions(
+       MacNotificationOptions(
            identifier: 'test-notifications',
            title: 'Hello',
            subtitle: 'This is a notification from Flutter to Mac',
@@ -42,7 +42,7 @@ try {
 ```dart
 try {
      MacNotifications.showNotification(
-       NocenOptions(
+       MacNotificationOptions(
            identifier: 'test-notifications',
            title: 'Hello',
            subtitle: 'This is a notification from Flutter to Mac',

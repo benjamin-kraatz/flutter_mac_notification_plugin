@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftNocenPlugin: NSObject, FlutterPlugin {
+public class SwiftMacNotificationsPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "nocen_plugin", binaryMessenger: registrar.messenger())
-    let instance = SwiftNocenPlugin()
+    let channel = FlutterMethodChannel(name: "mac_notifications", binaryMessenger: registrar.messenger())
+    let instance = SwiftMacNotificationsPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

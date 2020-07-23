@@ -8,5 +8,5 @@ import Foundation
 import mac_notifications
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-  NocenPlugin.register(with: registry.registrar(forPlugin: "NocenPlugin"))
+  MacNotificationsPlugin.register(with: registry.registrar(forPlugin: "MacNotificationsPlugin"))
 }

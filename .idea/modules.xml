@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/example/android/app/src/debug/debug.iml" filepath="$PROJECT_DIR$/example/android/app/src/debug/debug.iml" />
-      <module fileurl="file://$PROJECT_DIR$/flutter_mac_notification_plugin.iml" filepath="$PROJECT_DIR$/flutter_mac_notification_plugin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/app/src/main/main.iml" filepath="$PROJECT_DIR$/example/android/app/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/src/main/main1.iml" filepath="$PROJECT_DIR$/android/src/main/main1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/app/src/profile/profile.iml" filepath="$PROJECT_DIR$/example/android/app/src/profile/profile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mac_notifications.iml" filepath="$PROJECT_DIR$/mac_notifications.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/mac_notifications_android.iml" filepath="$PROJECT_DIR$/android/mac_notifications_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/mac_notifications_example_android.iml" filepath="$PROJECT_DIR$/example/android/mac_notifications_example_android.iml" />
     </modules>
   </component>
 </project>

@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 /// This provides information about a notification and must be given
 /// to [MacNotifications.showNotification].
-class NocenOptions {
+class MacNotificationOptions {
   /// A unique identifier. This must not be null.
   final String identifier;
 
@@ -42,7 +42,7 @@ class NocenOptions {
   /// Defaults to false.
   final bool schedule;
 
-  NocenOptions({
+  MacNotificationOptions({
     @required this.identifier,
     @required this.title,
     @required this.subtitle,
