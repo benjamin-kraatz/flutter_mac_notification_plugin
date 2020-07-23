@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee7680ae-43f3-4768-9a73-bef7e5eddcec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595532506992</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed pubspec.yaml">
+      <created>1595532763527</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1595532763527</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +136,7 @@
     <MESSAGE value="License added" />
     <MESSAGE value="[1.1.0]&#10;&#10;* NocenOptions is not MacNotificationOption&#10;* Example working" />
     <MESSAGE value="Readme fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme fixed" />
+    <MESSAGE value="Fixed pubspec.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed pubspec.yaml" />
   </component>
 </project>
