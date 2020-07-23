@@ -1,7 +1,7 @@
 ## 1.1.0
 
 * *BREAKING CHANGE*
-    > Renamed `NocenOptions` to `MacNotificationOption`
+    > Renamed `NocenOptions` to `MacNotificationOptions`
 
 * The example works now for macOS
 
