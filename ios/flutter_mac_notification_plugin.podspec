@@ -1,13 +1,13 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint nocen_plugin.podspec' to validate before publishing.
+# Run `pod lib lint flutter_mac_notification_plugin.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'mac_notifications'
+  s.name             = 'flutter_mac_notification_plugin'
   s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin.'
+  s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC
-A new Flutter plugin.
+A new flutter plugin project.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
