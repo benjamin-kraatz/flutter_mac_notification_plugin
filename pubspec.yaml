@@ -1,8 +1,7 @@
 name: mac_notifications
 description: A new Flutter plugin.
 version: 1.1.0
-author:
-homepage:
+homepage: https://github.com/beagle-barks/flutter_mac_notification_plugin
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
